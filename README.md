@@ -17,3 +17,14 @@ lucefdecryptor.exe [percentage]
 - `percentage` — how much of the code section to decrypt (0-100, default 100)
 
 The target process (`RobloxPlayerBeta.exe`) must be running. The dumped and reconstructed executable is saved as `dumped.exe` in the current directory.
+
+## Limitations
+
+- Target must be `RobloxPlayerBeta.exe` (hardcoded — change `proc::find` for other targets)
+- Some pages may remain encrypted if Hyperion's hook doesn't respond to the flush
+- Section headers in memory are corrupted by Hyperion — headers are taken from the disk image instead
+- The import scanner finds imports by scanning for 8-byte pointers in the `0x7FF...` address range — false positives are possible but rare
+
+## License
+
+MIT
