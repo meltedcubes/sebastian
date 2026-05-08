@@ -22,7 +22,7 @@ The target process (`RobloxPlayerBeta.exe`) must be running. The dumped and reco
 
 Some pages may remain encrypted if Hyperion's hook doesn't respond to the flush
 
-Section headers in memory are corrupted by Hyperion — headers are taken from the disk image instead
+Section headers in memory are corrupted by Hyperion - headers are taken from the disk image instead
 
 The import scanner finds imports by scanning for 8-byte pointers in the `0x7FF...` address range - false positives are possible but rare
 
